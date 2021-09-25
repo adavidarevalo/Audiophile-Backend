@@ -1,14 +1,10 @@
 const express = require('express');
-//const conectarDB = require('./config/db');
+const conectDB = require('./config/db');
 const cors = require('cors');
 
 const app = express();
 
-//conectarDB();
-
-const CorsOptions = {
-    //origin: "https://upbeat-volhard-0f49e6.netlify.app/"
-  }
+conectDB();
 
 app.use(cors());
 

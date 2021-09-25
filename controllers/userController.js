@@ -13,6 +13,7 @@ exports.createNewUser = async(req, res) => {
 
 
   const {email, password} = req.body
+  console.log(email, password)
   try{
     let userContainer = await User.findOne({email})
     if(userContainer){

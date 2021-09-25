@@ -1,11 +1,6 @@
 const mongoose = require("mongoose")
 
 const ProjectSchema = mongoose.Schema({
-  name:{
-    type: String,
-    require: true,
-    trim: true
-  },
   userCreator: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User"

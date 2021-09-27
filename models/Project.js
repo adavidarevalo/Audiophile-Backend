@@ -5,6 +5,9 @@ const ProjectSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User"
   },
+  product: {
+    
+  },
   date:{
     type: Date,
     default: Date.now()

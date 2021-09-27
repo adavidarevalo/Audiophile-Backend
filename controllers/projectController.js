@@ -9,8 +9,10 @@ exports.createProject = async(req, res) =>{
   }
   try{
     const project = new Project(req.body)
+    console.log(req.body)
 
     project.userCreator = req.userContainer.id
+    project.products = req.body.product
     
 
     project.save()

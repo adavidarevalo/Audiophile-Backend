@@ -32,7 +32,7 @@ exports.createNewUser = async(req, res) => {
 
     }
     jwt.sign(payload, process.env.Secret, {
-      expiresIn:3600
+      expiresIn:23600
     }, (error, token)=>{
       if(error) throw error;
 

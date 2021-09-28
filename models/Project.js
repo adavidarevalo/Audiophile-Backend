@@ -5,13 +5,14 @@ const ProjectSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User"
   },
-  price:{
-    type: String,
-    require: true
-  },
-  project: {
+  products: {
     type: Object,
     require: true
+  },
+  price: {
+    type: String,
+    require: true,
+    trim: true
   },
   date:{
     type: Date,

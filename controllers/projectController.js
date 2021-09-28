@@ -1,17 +1,14 @@
 const Project = require("../models/Project")
 const {validationResult} = require("express-validator")
-const connectDataBase = require("../config/db")
+const conectDB = require("../config/db")
 
 exports.createProject = async(req, res) =>{
-  const Errors = validationResult(req)
-  if(!Errors.isEmpty()){
-    return res.status(400).json({Errors: Errors.array()})
-  }
+  console.log("element ",req.body)
   try{
     const project = new Project(req.body)
 
     project.userCreator = req.userContainer.id
-    
+    project.project = req.body.project
 
     project.save()
     res.json(project)

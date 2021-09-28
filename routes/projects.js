@@ -6,9 +6,6 @@ const {check} = require("express-validator")
 
 router.post("/",
 auth,
-[
-  check("name", "The name of the project is required").not().isEmpty()
-],
 projectController.createProject
 )
 router.get("/",

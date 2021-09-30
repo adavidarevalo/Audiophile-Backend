@@ -6,7 +6,11 @@ const app = express();
 
 conectDB();
 
-app.use(cors());
+const CorsOptions = {
+    origin: "https://admiring-khorana-e932b1.netlify.app"
+  }
+
+app.use(cors(CorsOptions));
 
 app.use( express.json({ extended: true }));
 
